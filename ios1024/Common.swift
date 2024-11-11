@@ -2,13 +2,10 @@
 //  Common.swift
 //  ios1024
 //
-//  Created by Hans Dulimarta for CIS357
+//  Created by Hans Dulimarta on 10/31/24.
 //
 
+import Foundation
 enum SwipeDirection {
-//    case none
-    case left
-    case right
-    case up
-    case down
+    case left, right, up, down
 }

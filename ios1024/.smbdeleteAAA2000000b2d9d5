@@ -1,0 +1,27 @@
+//
+//  GameViewModel.swift
+//  ios1024
+//
+//  Created by Hans Dulimarta on 10/31/24.
+//
+
+import Foundation
+class GameViewModel: ObservableObject {
+    @Published var grid: Array<Array<Int>> = Array(repeating:
+                                                    Array(repeating: 0, count: 4), count: 4)
+    
+    func handleSwipe(_ dir: SwipeDirection) {
+        let fillValue = switch dir {
+        case .left: 1
+        case .right: 2
+        case .up: 3
+        case .down: 4
+        }
+        
+        for r in 0 ..< grid.count {
+            for c in 0 ..< grid[r].count {
+                grid[r][c] = fillValue
+            }
+        }
+    }
+}
